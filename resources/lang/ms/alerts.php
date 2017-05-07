@@ -26,9 +26,9 @@ return [
             'deleted'             => 'Pengguna berjaya dihapus.',
             'deleted_permanently' => 'Pengguna berjaya dihapus secara kekal.',
             'restored'            => 'Pengguna berjaya dipulihkan.',
-            'session_cleared'      => "Sesi pengguna berjaya dibersihkan.",
+            'session_cleared'     => 'Sesi pengguna berjaya dibersihkan.',
             'updated'             => 'Pengguna berjaya dikemas kini.',
-            'updated_password'    => "Kata laluan pengguna berjaya dikemas kini.",
+            'updated_password'    => 'Kata laluan pengguna berjaya dikemas kini.',
         ],
     ],
 ];

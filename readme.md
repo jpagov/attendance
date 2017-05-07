@@ -1,51 +1,82 @@
-## Laravel 5.4 Boilerplate
+## Attendance
 
-[![Latest Stable Version](https://poser.pugx.org/rappasoft/laravel-5-boilerplate/v/stable)](https://packagist.org/packages/rappasoft/laravel-5-boilerplate) [![Latest Unstable Version](https://poser.pugx.org/rappasoft/laravel-5-boilerplate/v/unstable)](https://packagist.org/packages/rappasoft/laravel-5-boilerplate) [![StyleCI](https://styleci.io/repos/30171828/shield?style=plastic)](https://styleci.io/repos/30171828/shield?style=plastic)
+[![Build Status](https://travis-ci.org/jpagov/attendance.svg?branch=master)](https://travis-ci.org/jpagov/attendance) [![StyleCI](https://styleci.io/repos/90129090/shield?style=plastic)](https://styleci.io/repos/90129090/shield?style=plastic)
 
-### Official Documentation
+## Installation
 
-[Click here for the official documentation](http://laravel-boilerplate.com)
+### 1. Download
 
-### Slack Channel
+[Download](https://github.com/jpagov/attendance/archive/master.zip) or clone using Git:
 
-Please join us in our Slack channel to get faster responses to your questions. Get your invite here: https://laravel-5-boilerplate.herokuapp.com
+```bash
+git clone https://github.com/jpagov/attendance.git
+```
 
-### Laravel 5.3
+### 2. Environment / Configuration
 
-You can download the last stable build of Laravel 5.3 [here](https://github.com/rappasoft/laravel-5-boilerplate/tree/Legacy_5.3).
+**2.1. Development**
 
-### Laravel 5.2
+This project use [Laravel 5 Boilerplate](https://github.com/rappasoft/laravel-5-boilerplate) as boilerplate and developed on [Laravel Homestead](https://laravel.com/docs/master/homestead) and I highly :+1: you use either that or [Laravel Valet](https://laravel.com/docs/master/valet) for Mac user only, to get the optimal server configuration and no errors through installation.
 
-You can download the last stable build of Laravel 5.2 [here](https://github.com/rappasoft/laravel-5-boilerplate/tree/Legacy_5.2).
+**2.2. Environment**
 
-### Laravel 5.1
+This package ships with a `.env.example` file in the root of the project. You must rename this file to just `.env`
 
-You can download the last stable build of Laravel 5.1 [here](https://github.com/rappasoft/laravel-5-boilerplate/tree/Legacy_5.1).
+```bash
+cp .env.example .env
+```
 
-### Introduction
+**Note**:
+- Make sure you have hidden files shown on your system.
+- If you want to use Travis CI, you can use `.env.example` and rename to `.env.travis`
 
-Laravel Boilerplate provides you with a massive head start on any size web application. It comes with a full featured access control system out of the box with an easy to learn API and is built on a Twitter Bootstrap foundation with a front and backend architecture. We have put a lot of work into it and we hope it serves you well and saves you time!
+**2.3. Database**
 
-### Wiki
+You must create your database on your server and on your `.env` file update the following lines:
 
-Please view the [wiki](https://github.com/rappasoft/laravel-5-boilerplate/wiki) for a list of [features](https://github.com/rappasoft/laravel-5-boilerplate/wiki#features).
+```
+DB_DATABASE=attendance
+```
 
-### Issues
+### 4. Composer
 
-If you come across any issues please [report them here](https://github.com/rappasoft/Laravel-5-Boilerplate/issues).
+Project dependencies are managed through the [PHP Composer tool](http://getcomposer.org/). The first step is to install the depencencies by navigating into your project in terminal and typing this command:
 
-### Contributing
+```bash
+composer install
+```
 
-Thank you for considering contributing to the Laravel Boilerplate project! Please feel free to make any pull requests, or e-mail me a feature request you would like to see in the future to Anthony Rappa at rappa819@gmail.com.
+### 5. NPM/Yarn (optional)
 
-### Security Vulnerabilities
+In order to install the Javascript packages for frontend development, you will need the [Node Package Manager (NPM)](https://www.npmjs.com/), and optionally the [Yarn Package Manager (Yarn)](https://code.facebook.com/posts/1840075619545360) by Facebook (Recommended)
 
-If you discover a security vulnerability within this boilerplate, please send an e-mail to Anthony Rappa at rappa819@gmail.com, or create a pull request if possible. All security vulnerabilities will be promptly addressed. Please reference [this page](https://github.com/rappasoft/laravel-5-boilerplate/wiki/7.-Security-Fixes) to make sure you are up to date.
+If you only have NPM installed you have to run this command from the root of the project:
 
-### Donations
+```bash
+npm install
+```
 
-If you would like to help the continued efforts of this project, any size [donations](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=JJWUZ4E9S9SFG&lc=US&item_name=Laravel%205%20Boilerplate&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted) are welcomed and highly appreciated.
+If you have Yarn installed, run this instead from the root of the project:
 
-### License
+```bash
+yarn
+```
 
-MIT: [http://anthony.mit-license.org](http://anthony.mit-license.org)
+### 6. Artisan Commands
+
+Set the key that Laravel will use when doing encryption, run the built in migrations to create the database tables and dummy data:
+
+```bash
+php artisan key:generate
+php artisan migrate --seed
+```
+
+You should see the information in your database tables.
+
+## Issues
+
+If you come across any issues please [report them here](https://github.com/jpagov/attendance/issues).
+
+## Contributing
+
+Thank you for considering contributing to the Laravel Attendance project! Please feel free to make any pull requests. appreciated.
